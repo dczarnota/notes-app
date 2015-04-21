@@ -1,0 +1,8 @@
+{
+  "name": "notes-app",
+  "version": "0.0.1",
+  "description": "mobile web app for storing notes",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
