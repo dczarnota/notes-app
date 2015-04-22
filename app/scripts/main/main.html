@@ -1,7 +1,24 @@
+<div ng-include=" 'app/scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="MainController">
 
-  <header>
-    <p>hello</p>
-  </header>
+  <div class="container-fluid">
+    <div id="form-container" class="row">
+      <div class="col-xs-8">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="new note">
+          </div>
+        </form>
+      </div>
+      <div class="col-xs-4">
+        <button type="button" class="btn">save</button>
+      </div>
+    </div>
+
+    <div id="note-container" class="row">
+      <note></note>
+    </div>
+
+  </div>
 
 </div>
