@@ -5,10 +5,9 @@ angular.module('notesApp', ['ngAnimate', 'ui.router'])
       .state('home', {
         url: '/',
         templateUrl: '/app/scripts/main/main.html',
-        conroller: 'MainController'
-      });
+        controller: 'MainController'
+      })
 
       //Routes to homepage on default
       $urlRouterProvider.otherwise('/');
-
   });
