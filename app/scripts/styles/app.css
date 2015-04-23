@@ -1,8 +1,18 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #F5F5F5;
+}
+
 .navbar {
-  background-color: #303F9F;
+  background-color: #ed891f;
   color: #FFF;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   border: #303F9F;
+  font-weight: 400;
+}
+
+.navbar-brand {
+  font-size: 24px;
 }
 
 .navbar-default .navbar-brand {
@@ -13,7 +23,17 @@
   color: #FFF;
 }
 
+.navbar-default .navbar-toggle {
+  border-color: #FFF;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
 #form-container {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   position: relative;
   top: 60px;
 }
@@ -27,6 +47,8 @@
   font-size: 18px;
   height: 100%;
   color: #ed891f;
+  background-color: transparent;
+  font-weight: 400;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -39,13 +61,18 @@
   border-color: #ed891f;
 }
 
+.form-edit {
+  background-color: transparent;
+  font-size: 24px;
+}
+
 .btn {
   margin-top: 10px;
   font-size: 18px;
   color: #67b6ba;
   background-color: transparent;
-  border: 1px solid #67b6ba;
-  width: 95px;
+  border: 2px solid #67b6ba;
+  width: 90px;
 }
 
 .btn:hover {
@@ -57,9 +84,66 @@
   outline: 5px auto #ed891f;
 }
 
+.btn-delete {
+  border: 0;
+  background-color: transparent;
+  float: right;
+  margin-left: 6px;
+}
+
+.btn-edit {
+  border: 0;
+  background-color: transparent;
+  float: right;
+  margin-right: 6px;
+}
+
+.btn-update {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ed891f;
+  background-color: transparent;
+  border: 2px solid #ed891f;
+  width: 95px;
+  border-radius: 4px;
+  float: right;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.btn-update:focus {
+  outline: 5px auto #ed891f;
+}
+
+.btn-cancel {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ed891f;
+  background-color: transparent;
+  border: 2px solid #ed891f;
+  width: 95px;
+  border-radius: 4px;
+  float: left;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.btn-cancel:focus {
+  outline: 5px auto #ed891f;
+}
+
 #note-container {
-   position: relative;
-   top: 70px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: relative;
+  top: 70px;
+}
+
+.list-group .list-group-item {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .note-custom {
@@ -67,5 +151,6 @@
   color: #fff;
   padding-top: 10px;
   margin-bottom: 1px;
+  border: 0;
 }
 

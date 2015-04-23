@@ -2,21 +2,42 @@
 <div ng-controller="MainController">
 
   <div class="container-fluid">
+
     <div id="form-container" class="row">
-      <div class="col-xs-8">
-        <form class="form-inline">
+      <form class="form-inline" ng-submit="addNote()">
+        <div class="col-xs-8">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="new note">
+            <input type="text" class="form-control" placeholder="new note" ng-model="noteText" required>
           </div>
-        </form>
-      </div>
-      <div class="col-xs-4">
-        <button type="button" class="btn">save</button>
-      </div>
+        </div>
+        <div class="col-xs-4">
+          <button type="submit" class="btn">save</button>
+        </div>
+      </form>
     </div>
 
-    <div id="note-container" class="row">
-      <note></note>
+    <div class="row">
+      <ul id="note-container" class="list-group">
+        <li class="list-group-item note-custom" ng-repeat="note in notes track by $index">{{ note.noteText }}
+          <button type="button" class="btn-delete" ng-click="removeNote($index)" ng-hide="note.editStatus">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true" aria-label="remove"></span>
+          </button>
+          <button type="button" class="btn-edit" ng-click="editNote($index)" ng-hide="note.editStatus">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true" aria-label="remove"></span>
+          </button>
+          <form class="form-inline" ng-show="note.editStatus" required>
+            <input type="text" class="form-control form-edit" ng-model="note.noteText" required>
+            <div class="row">
+              <div class="col-xs-6">
+                <button type="submit" class="btn-update" ng-click="updateNote($index, note)">update</button>
+              </div>
+              <div class="col-xs-6">
+                <button type="submit" class="btn-cancel" ng-click="cancelEdit($index)">cancel</button>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
     </div>
 
   </div>
