@@ -1,4 +1,4 @@
-angular.module('notesApp', ['ngAnimate', 'ui.router'])
+angular.module('notesApp', ['ui.router'])
   .config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
