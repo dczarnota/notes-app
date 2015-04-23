@@ -1,4 +1,4 @@
 angular.module('notesApp')
-  .controller('NavbarController', function($scope){
-
+  .controller('NavbarController', function(){
+    
   });
