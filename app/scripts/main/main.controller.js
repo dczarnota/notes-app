@@ -13,6 +13,11 @@ angular.module('notesApp')
 
     // Add new notes to local storage
     $scope.addNote = function(){
+      // Checks if note is blank
+      if($scope.noteText === undefined || ''){
+        return false;
+      }
+
       $scope.notes.push( {noteText: $scope.noteText, editStatus: false} );
       StorageFactory.storeNote($scope.notes);      
       
